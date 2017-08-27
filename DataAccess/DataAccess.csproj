@@ -51,42 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnjomanOlya.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Father.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Grade.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="JavabeTamrin.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Karmand.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Lesson.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LessonGroup.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Mother.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Nomarat.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ozviat.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PaymentHistory.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Presence.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AnjomanOlyaRepository.cs" />
     <Compile Include="Repository\BarnameRepository.cs" />
@@ -100,68 +64,10 @@
     <Compile Include="Repository\vPresenceRepositorycs.cs" />
     <Compile Include="Repository\vStudentRepository.cs" />
     <Compile Include="Repository\vTamrinRepository.cs" />
-    <Compile Include="Salary.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SchoolEDM.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolEDM.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SchoolEDM.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SchoolEDM.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolEDM.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Student.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StuRegister.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tamarin.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vbarnameHaftegi.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vJTamrin.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vLessonGroup.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vNomarat.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vOzviat.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vPresence.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vStudent.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vTamrin.cs">
-      <DependentUpon>SchoolEDM.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="SchoolEDM.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SchoolEDM.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="SchoolEDM.edmx.diagram">
-      <DependentUpon>SchoolEDM.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -171,18 +77,6 @@
       <Project>{01d597c2-c02f-4685-aa57-a4097c1f7341}</Project>
       <Name>Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SchoolEDM.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchoolEDM.edmx</DependentUpon>
-      <LastGenOutput>SchoolEDM.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SchoolEDM.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchoolEDM.edmx</DependentUpon>
-      <LastGenOutput>SchoolEDM.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
