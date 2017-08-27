@@ -22,5 +22,6 @@ namespace DataAccess
         public int OzviatID { get; set; }
         public Nullable<int> LGID { get; set; }
         public string FullName { get; set; }
+        public string Year { get; set; }
     }
 }

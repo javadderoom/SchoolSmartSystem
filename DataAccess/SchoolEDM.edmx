@@ -228,6 +228,7 @@ warning 6002: The table/view 'SchoolDB.dbo.vbarnameHaftegi' does not have a prim
           <Property Name="LessonTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="OzviatID" Type="int" Nullable="false" />
           <Property Name="LGID" Type="int" />
+          <Property Name="Year" Type="nvarchar" MaxLength="5" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'SchoolDB.dbo.vJTamrin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -603,7 +604,8 @@ warning 6002: The table/view 'SchoolDB.dbo.vTamrin' does not have a primary key 
 [vbarnameHaftegi].[StudentCode] AS [StudentCode], 
 [vbarnameHaftegi].[LessonTitle] AS [LessonTitle], 
 [vbarnameHaftegi].[OzviatID] AS [OzviatID], 
-[vbarnameHaftegi].[LGID] AS [LGID]
+[vbarnameHaftegi].[LGID] AS [LGID], 
+[vbarnameHaftegi].[Year] AS [Year]
 FROM [dbo].[vbarnameHaftegi] AS [vbarnameHaftegi]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vJTamrin" EntityType="Self.vJTamrin" store:Type="Views" store:Schema="dbo">
@@ -1482,6 +1484,7 @@ FROM [dbo].[vTamrin] AS [vTamrin]</DefiningQuery>
           <Property Name="OzviatID" Type="Int32" Nullable="false" />
           <Property Name="LGID" Type="Int32" />
           <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1871,6 +1874,7 @@ FROM [dbo].[vTamrin] AS [vTamrin]</DefiningQuery>
           <EntitySetMapping Name="vbarnameHaftegis">
             <EntityTypeMapping TypeName="SchoolDBModel.vbarnameHaftegi">
               <MappingFragment StoreEntitySet="vbarnameHaftegi">
+                <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="LGID" ColumnName="LGID" />
                 <ScalarProperty Name="OzviatID" ColumnName="OzviatID" />

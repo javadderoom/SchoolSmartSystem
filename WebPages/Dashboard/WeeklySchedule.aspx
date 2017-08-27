@@ -42,7 +42,7 @@
                     <asp:Literal runat="server" Text="<%$ Resources:Dashboard,Year%>" /></span>
                 <span class="fa fa-arrow-circle-down"></span>
                 <br>
-                <span id="ContentPlaceHolder1_lblTotalTermSelectedUnits" class="control-label formLabel" style="color: #0066CC; font-size: 100%; font-weight: bold;">0</span>
+                <span id="lblYear" runat="server" class="control-label formLabel" style="color: #0066CC; font-size: 100%; font-weight: bold;"></span>
             </div>
             <%-- <div class="col-md-4 col-xs-12 text-righ">
                 <asp:Button ID="btnAdd" name="btnAdd" class="btn btn-primary" runat="server"
@@ -76,8 +76,66 @@
                     <Columns>
                         <asp:BoundField DataField="LessonTitle" HeaderText="<%$ Resources:Dashboard,LessonTitle%>" />
                         <asp:BoundField DataField="FullName" HeaderText="<%$ Resources:Dashboard,TeacherFName%>" />
-                        <asp:BoundField DataField="Day" HeaderText="<%$ Resources:Dashboard,Day%>" />
-                        <asp:BoundField DataField="Time" HeaderText="<%$ Resources:Dashboard,Time%>" />
+                        <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Justify">
+                            <HeaderTemplate>
+                                شنبه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+
+                            <%-- <ItemStyle HorizontalAlign="Justify" VerticalAlign="Middle"></ItemStyle>--%>
+
+                            <ItemStyle HorizontalAlign="Justify" VerticalAlign="Middle"></ItemStyle>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                یکشنبه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                دو شنبه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                سه شنبه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                چهارشنبه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                پنج شنبه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                جمعه
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                     </Columns>
 
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />

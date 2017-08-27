@@ -35,22 +35,41 @@ namespace DataAccess.Repository
             return result;
         }
 
-        public List<string> GetlistOfAllYears()
+        public List<int?> GetListOfDay(int id)
         {
-            List<string> result = new List<string>();
+            SchoolDBEntities sd = conn.GetContext();
 
-            using (SchoolDBEntities sd = conn.GetContext())
-            {
-                IEnumerable<string> pl =
-                    from r in sd.vLessonGroups
+            IEnumerable<int?> pl =
+                from r in sd.vbarnameHaftegis
+                where r.OzviatID == id
+                select r.Day;
 
-                    orderby r.Year
-                    select r.Year;
+            return pl.ToList();
+        }
 
-                pl.Distinct();
-                result = pl.ToList();
-                return result;
-            }
+        public List<int?> GetListOfTime(int id)
+        {
+            SchoolDBEntities sd = conn.GetContext();
+
+            IEnumerable<int?> pl =
+                from r in sd.vbarnameHaftegis
+                where r.OzviatID == id
+                select r.Time;
+
+            return pl.ToList();
+        }
+
+        public List<string> GetTeacher(int lgid)
+        {
+            SchoolDBEntities sd = conn.GetContext();
+
+            IEnumerable<string> pl =
+                from r in sd.LessonGroups
+                where r.LGID == lgid
+
+                select r.TeacherCode;
+
+            return pl.ToList();
         }
 
         public DataTable GetAllLessonGroups()
@@ -88,24 +107,11 @@ namespace DataAccess.Repository
             return Convert.ToBoolean(pb.SaveChanges());
         }
 
-        public vLessonGroup FindByLGID(int id)
+        public vbarnameHaftegi FindByOzviatTak(int id)
         {
             SchoolDBEntities db = new SchoolDBEntities();
 
-            return db.vLessonGroups.Where(p => p.LGID == id).Single();
-        }
-
-        public List<string> GetTeacher(int lgid)
-        {
-            SchoolDBEntities sd = conn.GetContext();
-
-            IEnumerable<string> pl =
-                from r in sd.LessonGroups
-                where r.LGID == lgid
-
-                select r.TeacherCode;
-
-            return pl.ToList();
+            return db.vbarnameHaftegis.Where(p => p.OzviatID == id).Single();
         }
 
         public DataTable FindByOzviat(int ozviat)
