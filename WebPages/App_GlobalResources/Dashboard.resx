@@ -378,4 +378,10 @@
   <data name="Add" xml:space="preserve">
     <value>افزودن</value>
   </data>
+  <data name="ClassManagment" xml:space="preserve">
+    <value>مدیریت کلاس ها</value>
+  </data>
+  <data name="StudentCode" xml:space="preserve">
+    <value>کد دانش آموزی</value>
+  </data>
 </root>

@@ -68,6 +68,26 @@ namespace DataAccess.Repository
             result = pl.ToList();
             return OnlineTools.ToDataTable(result);
         }
+        public DataTable GetLessonGroupsByLGIDList(List<int> list)
+        {
+            List<vLessonGroup> result = new List<vLessonGroup>();
+            foreach (int id in list)
+            {
+
+                SchoolDBEntities sd = conn.GetContext();
+
+                IEnumerable<vLessonGroup> pl =
+                    from r in sd.vLessonGroups
+                    where r.LGID == id
+                    orderby r.LGID
+                    select r;
+                foreach (var item in pl.ToList())
+                { result.Add(item); }
+
+            }
+
+            return OnlineTools.ToDataTable(result);
+        }
 
         public Boolean SaveLessonGroups(LessonGroup lessonGroup)
         {
@@ -118,6 +138,18 @@ namespace DataAccess.Repository
                 where r.LGID == lgid
 
                 select r.TeacherCode;
+
+            return pl.ToList();
+        }
+        public List<int> GetClassesOfTeacher(string id)
+        {
+            SchoolDBEntities sd = conn.GetContext();
+
+            IEnumerable<int> pl =
+                from r in sd.LessonGroups
+                where r.TeacherCode == id
+
+                select r.LGID;
 
             return pl.ToList();
         }

@@ -18,6 +18,7 @@
 
             <asp:Literal runat="server" Text="<%$ Resources:Dashboard,Lessons%>" /></h4>
     </div>
+
     <div class="x_content">
         <div class="row">
             <div class="col-md-4 hidden-xs">

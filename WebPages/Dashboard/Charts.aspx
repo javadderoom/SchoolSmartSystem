@@ -10,7 +10,7 @@
     <link href="Styles/simple-sidebar.css" rel="stylesheet" />
     <link href="Styles/AdminPanelStyles.css" rel="stylesheet" />
 
-    <%--  <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <%--  <link href="css/bootstrap.min.css" rel="stylesheet" HAMOON/>
     <link href="css/simple-sidebar.css" rel="stylesheet" />--%>
     <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 </asp:Content>

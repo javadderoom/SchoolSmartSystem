@@ -196,6 +196,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مدیریت کلاس ها.
+        /// </summary>
+        internal static string ClassManagment {
+            get {
+                return ResourceManager.GetString("ClassManagment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to کد ملی.
         /// </summary>
         internal static string codemelli {
@@ -714,6 +723,15 @@ namespace Resources {
         internal static string StuCount {
             get {
                 return ResourceManager.GetString("StuCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کد دانش آموزی.
+        /// </summary>
+        internal static string StudentCode {
+            get {
+                return ResourceManager.GetString("StudentCode", resourceCulture);
             }
         }
         
