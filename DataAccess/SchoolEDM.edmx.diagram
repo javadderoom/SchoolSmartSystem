@@ -43,6 +43,7 @@
         <AssociationConnector Association="SchoolDBModel.FK_Ozviat_LessonGroups" />
         <AssociationConnector Association="SchoolDBModel.FK_Tamarin_LessonGroups" />
         <EntityTypeShape EntityType="SchoolDBModel.vOzviat" Width="1.5" PointX="13.375" PointY="5.75" />
+        <EntityTypeShape EntityType="SchoolDBModel.vbarnameHaftegi" Width="1.5" PointX="10.375" PointY="14.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

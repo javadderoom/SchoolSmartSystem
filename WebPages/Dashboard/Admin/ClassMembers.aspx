@@ -28,7 +28,7 @@
                                 <asp:Literal runat="server" Text="<%$ Resources:Dashboard,StuCount%>" /></span>
                             <span class="fa fa-arrow-circle-down"></span>
                             <br />
-                            <span runat="server" id="lblStudentsCount" class="control-label formLabel" style="color: Green; font-size: 100%; font-weight: bold;"></span>
+                            <span runat="server" id="lblStudentsCount" class="control-label formLabel" style="color: #0066CC; font-size: 100%; font-weight: bold;"></span>
                         </div>
                         <div class="col-xs-12 col-sm-3  text-right dirRight goLeft">
                             <span id="ContentPlaceHolder1_Label4" class="control-label formLabel" style="color: #666666; font-size: 100%; font-weight: bold;">

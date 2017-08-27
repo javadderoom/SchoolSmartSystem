@@ -826,6 +826,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to برنامه هفتگی.
+        /// </summary>
+        internal static string WeeklySchedule {
+            get {
+                return ResourceManager.GetString("WeeklySchedule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to سال تحصیلی.
         /// </summary>
         internal static string Year {
