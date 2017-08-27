@@ -19,6 +19,7 @@ namespace WebPages.Dashboard
         }
 
         private BarnameRepository bn = new BarnameRepository();
+        private vLessonGroupRepository vLR = new vLessonGroupRepository();
 
         private void ScheduleLoad()
         {
@@ -26,7 +27,16 @@ namespace WebPages.Dashboard
             List<int?> Times = bn.GetListOfTime(6);
             vbarnameHaftegi bh = bn.FindByOzviatTak(6);
             lblYear.InnerText = bh.Year;
-
+            List<string> yearsList = vLR.GetlistOfAllYears();
+            IEnumerable<string> dYears = yearsList.Distinct();
+            yearsList = dYears.ToList();
+            ddlYear.Items.Add("سال تحصیلی");
+            ddlYear.Items[0].Value = "0";
+            for (int i = 1; i <= yearsList.Count; i++)
+            {
+                ddlYear.Items.Add(yearsList[i - 1]);
+                ddlYear.Items[i].Value = yearsList[i - 1];
+            }
             gvSchedule.DataSource = bn.FindByOzviat(6);
             gvSchedule.DataBind();
             for (int i = 0; i < days.Count; i++)

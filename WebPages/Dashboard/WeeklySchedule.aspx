@@ -41,8 +41,9 @@
                 <span id="ContentPlaceHolder1_Label3" class="control-label formLabel" style="color: #666666; font-size: 100%; font-weight: bold;">
                     <asp:Literal runat="server" Text="<%$ Resources:Dashboard,Year%>" /></span>
                 <span class="fa fa-arrow-circle-down"></span>
-                <br>
+                <br />
                 <span id="lblYear" runat="server" class="control-label formLabel" style="color: #0066CC; font-size: 100%; font-weight: bold;"></span>
+                <asp:DropDownList ID="ddlYear" runat="server"></asp:DropDownList>
             </div>
             <%-- <div class="col-md-4 col-xs-12 text-righ">
                 <asp:Button ID="btnAdd" name="btnAdd" class="btn btn-primary" runat="server"

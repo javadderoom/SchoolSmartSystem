@@ -120,8 +120,15 @@ namespace WebPages.Dashboard.Admin
             }
             //////////////////////
             List<string> yearsList = vLR.GetlistOfAllYears();
+            IEnumerable<string> dYears = yearsList.Distinct();
+            yearsList = dYears.ToList();
             Year.Items.Add("سال تحصیلی");
             Year.Items[0].Value = "0";
+            for (int i = 1; i <= yearsList.Count; i++)
+            {
+                Year.Items.Add(yearsList[i - 1]);
+                Year.Items[i].Value = yearsList[i - 1];
+            }
         }
 
         protected void btnSabtLessonGroup_Click(object sender, EventArgs e)
