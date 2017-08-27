@@ -12,16 +12,16 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class vNomarat
+    public partial class vbarnameHaftegi
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FullName { get; set; }
+        public string Class { get; set; }
+        public Nullable<int> Day { get; set; }
+        public Nullable<int> Time { get; set; }
         public string StudentCode { get; set; }
-        public string Nomre { get; set; }
-        public Nullable<int> ExamType { get; set; }
-        public string Date { get; set; }
-        public string TeacherCode { get; set; }
-        public Nullable<bool> Type { get; set; }
-        public Nullable<int> NomrePercent { get; set; }
+        public string LessonTitle { get; set; }
+        public int OzviatID { get; set; }
+        public Nullable<int> LGID { get; set; }
+        public string Year { get; set; }
     }
 }

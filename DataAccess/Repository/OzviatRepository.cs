@@ -20,7 +20,7 @@ namespace DataAccess.Repository
             conn = new Connection();
         }
 
-        public List<string> FindByLGID(int lgid)
+        public List<string> FindStudentCodeByLGID(int lgid)
         {
             List<string> result = new List<string>();
 
@@ -35,7 +35,21 @@ namespace DataAccess.Repository
             result = pl.ToList();
             return result;
         }
+        public DataTable FindByLGID(int lgid)
+        {
+            List<vOzviat> result = new List<vOzviat>();
 
+            SchoolDBEntities sd = conn.GetContext();
+
+            IEnumerable<vOzviat> pl =
+                from r in sd.vOzviats
+                where r.LGID == lgid
+
+                select r;
+
+            result = pl.ToList();
+            return OnlineTools.ToDataTable(result);
+        }
         public vStudent FindvStudent(string stu)
         {
             vStudent result = null;

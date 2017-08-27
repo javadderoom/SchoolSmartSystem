@@ -126,6 +126,9 @@
     <Compile Include="Tamarin.cs">
       <DependentUpon>SchoolEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="vbarnameHaftegi.cs">
+      <DependentUpon>SchoolEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="vJTamrin.cs">
       <DependentUpon>SchoolEDM.tt</DependentUpon>
     </Compile>

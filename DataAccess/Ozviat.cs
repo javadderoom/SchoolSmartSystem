@@ -26,9 +26,9 @@ namespace DataAccess
         public string StudentCode { get; set; }
     
         public virtual ICollection<JavabeTamrin> JavabeTamrins { get; set; }
+        public virtual LessonGroup LessonGroup { get; set; }
         public virtual ICollection<Nomarat> Nomarats { get; set; }
         public virtual Student Student { get; set; }
         public virtual ICollection<Presence> Presences { get; set; }
-        public virtual LessonGroup LessonGroup { get; set; }
     }
 }

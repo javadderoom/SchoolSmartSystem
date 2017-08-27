@@ -16,7 +16,7 @@ namespace DataAccess
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public long StudentCode { get; set; }
+        public string StudentCode { get; set; }
         public string Class { get; set; }
         public string TamrinTitle { get; set; }
         public string StartDate { get; set; }

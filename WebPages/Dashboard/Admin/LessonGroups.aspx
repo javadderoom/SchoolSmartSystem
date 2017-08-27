@@ -54,6 +54,7 @@
                 </div>
             </div>
         </div>
+
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
         <div id="ContentPlaceHolder1_upGrid">

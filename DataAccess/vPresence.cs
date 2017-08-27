@@ -14,7 +14,7 @@ namespace DataAccess
     
     public partial class vPresence
     {
-        public long StudentCode { get; set; }
+        public string StudentCode { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Nullable<int> FatherID { get; set; }

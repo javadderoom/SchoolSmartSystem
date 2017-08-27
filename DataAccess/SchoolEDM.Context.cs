@@ -30,6 +30,7 @@ namespace DataAccess
         public DbSet<Grade> Grades { get; set; }
         public DbSet<JavabeTamrin> JavabeTamrins { get; set; }
         public DbSet<Karmand> Karmands { get; set; }
+        public DbSet<LessonGroup> LessonGroups { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Mother> Mothers { get; set; }
         public DbSet<Nomarat> Nomarats { get; set; }
@@ -40,13 +41,13 @@ namespace DataAccess
         public DbSet<Student> Students { get; set; }
         public DbSet<StuRegister> StuRegisters { get; set; }
         public DbSet<Tamarin> Tamarins { get; set; }
+        public DbSet<vbarnameHaftegi> vbarnameHaftegis { get; set; }
         public DbSet<vJTamrin> vJTamrins { get; set; }
         public DbSet<vLessonGroup> vLessonGroups { get; set; }
         public DbSet<vNomarat> vNomarats { get; set; }
+        public DbSet<vOzviat> vOzviats { get; set; }
         public DbSet<vPresence> vPresences { get; set; }
         public DbSet<vStudent> vStudents { get; set; }
         public DbSet<vTamrin> vTamrins { get; set; }
-        public DbSet<LessonGroup> LessonGroups { get; set; }
-        public DbSet<vOzviat> vOzviats { get; set; }
     }
 }

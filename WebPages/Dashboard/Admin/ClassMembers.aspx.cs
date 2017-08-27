@@ -36,7 +36,7 @@ namespace WebPages.Dashboard.Admin
         public void LoadSelectedStudents()
         {
             List<vOzviat> vs = new List<vOzviat>();
-            List<string> St = or.FindByLGID(3);
+            List<string> St = or.FindStudentCodeByLGID(3);
             for (int i = 0; i < St.Count; i++)
             {
                 vs.Add(or.FindStudentinOzviat(St[i]));
@@ -183,7 +183,7 @@ namespace WebPages.Dashboard.Admin
                 string id = row.Cells[0].Text;
                 DataAccess.Ozviat oo = new DataAccess.Ozviat();
                 oo.LGID = 3;
-                List<string> St = or.FindByLGID(3);
+                List<string> St = or.FindStudentCodeByLGID(3);
 
                 if (St.IndexOf(id) == -1)
                 {
